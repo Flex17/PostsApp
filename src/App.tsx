@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Posts from './components/posts/Posts';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar';
+import UserPage from './components/userPage/UserPage';
+import AboutMePage from './components/aboutMePage/AboutMePage';
+
+export const POSTS_PAGE = '/';
+export const ABOUT_ME_PAGE = '/about_me';
+export const ABOUT_USER_PAGE = '/about_user';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App w-75 m-auto">
+			<Navbar/>
+			<Routes>
+				<Route path={POSTS_PAGE} element={<Posts/>}/>
+				<Route path={ABOUT_ME_PAGE} element={<AboutMePage/>}/>
+				<Route path={`${ABOUT_USER_PAGE}/:id`} element={<UserPage/>}/>
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
