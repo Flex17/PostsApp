@@ -18,9 +18,9 @@ const Post: React.FC<PostI> = ({
 
     return (
         <Container className="mb-4">
-			<Row>
-				<NavLink to={`${ABOUT_USER_PAGE}/${userId}`}>
-					<Image roundedCircle src={logo} style={{maxWidth: '85px'}}/>
+			<Row className="d-flex">
+				<NavLink to={`${ABOUT_USER_PAGE}/${userId}`} className="w-25" style={{maxWidth: '150px'}}>
+					<Image roundedCircle src={logo} className="w-100"/>
 				</NavLink>
 				<Col>
 					<div>{title}</div>

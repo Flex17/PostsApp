@@ -10,6 +10,7 @@ import createSagaMiddleware from "redux-saga";
 import postsSaga from './saga/postsSaga';
 import { reducers } from './store/reducer';
 import { BrowserRouter } from 'react-router-dom';
+import { userPostsSaga, userSaga } from './saga/userSaga';
 
 const saga = createSagaMiddleware();
 
@@ -21,6 +22,8 @@ const store = configureStore({
 });
 
 saga.run(postsSaga);
+saga.run(userSaga);
+saga.run(userPostsSaga)
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
