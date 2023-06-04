@@ -32,7 +32,7 @@ const Posts: React.FC = () => {
     // * Фильтр постов
     useEffect(() => {
         if (searchValue) {
-            const filteredPosts = posts.filter(post => post.title.includes(searchValue));
+            const filteredPosts = posts.filter(post => post.title.toLowerCase().includes(searchValue.toLowerCase()));
             dispatch(setFilteredPosts(sort(filteredPosts)));
         } else {
             dispatch(setFilteredPosts(sort(posts)));
