@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/reducer';
 import { getPostsFetch, setFilteredPosts } from '../../store/postsReducer';
-import { Container } from 'react-bootstrap';
 import Spinner from '../../ui/Spinner';
 import useDelay from '../../hooks/useDelay';
 import useSearch from '../../hooks/useSearch';

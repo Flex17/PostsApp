@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { ABOUT_ME_PAGE, POSTS_PAGE } from '../../App';
 import css from './navbar.module.scss';
 import Menu from './menu/Menu';
 
