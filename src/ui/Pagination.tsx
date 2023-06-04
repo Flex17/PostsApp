@@ -20,15 +20,20 @@ const Pagination: React.FC<PaginationI> = ({
 	totalPages,
 }: PaginationI) => {
 
+	const isPreviousActive = currentPage === 1 ? 'disabled' : '';
+	const isNextActive = currentPage === totalPages ? 'disabled' : '';
+
+	// * Рендерит кнопочки с номерами страниц
 	const renderPaginationItems = (totalPages: number) => {
 		const paginationItems = [];
 		for (let i = 1; i <= totalPages; i++) {
 			const clickHandler = () => {
 				goToPage(i);
 			}
+			const isActive = i === currentPage ? 'active' : '';
 			paginationItems.push(
 				<li
-					className={`page-item ${i === currentPage ? 'active' : ''}`}
+					className={`page-item ${isActive}`}
 					onClick={clickHandler}
 					role="button"
 				>
@@ -46,7 +51,7 @@ const Pagination: React.FC<PaginationI> = ({
 					<Container className="d-flex justify-content-center">
 						<ul className="pagination user-select-none">
 							<li
-								className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}
+								className={`page-item ${isPreviousActive}`}
 								onClick={previousPage}
 								role="button"
 							>
@@ -54,7 +59,7 @@ const Pagination: React.FC<PaginationI> = ({
 							</li>
 							{renderPaginationItems(totalPages)}
 							<li
-								className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}
+								className={`page-item ${isNextActive}`}
 								onClick={nextPage}
 								role="button"
 							>

@@ -14,13 +14,13 @@ const SearchBar: React.FC<SearchBarI> = ({
 }: SearchBarI) => {
 
     return (
-		<div className="container h-100">
+		<div className="container p-0">
 			<InputGroup className="col-6 d-flex align-items-center position-relative">
 				<FormControl
 					placeholder="Search"
 					aria-label="Search"
 					aria-describedby="basic-addon2"
-					className="shadow-none"
+					className="shadow-none rounded"
 					style={{zIndex: 2}}
 					value={searchValue}
 					onChange={e => onChangeSearchValue(e.target.value)}

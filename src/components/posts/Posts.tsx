@@ -8,13 +8,16 @@ import useDelay from '../../hooks/useDelay';
 import useSearch from '../../hooks/useSearch';
 import SearchBar from '../../ui/SearchBar';
 import PostsList from './PostsList';
+import useSortPosts from '../../hooks/useSortPosts';
+import SortMenu from '../../ui/SortMenu';
 
 const Posts: React.FC = () => {
     const posts = useSelector((state: RootState) => state.posts.posts);
     const isLoading = useSelector((state: RootState) => state.posts.isLoading);
-    const dispatch = useDispatch();
 
+    const dispatch = useDispatch();
     const {isVisible} = useDelay();
+    const {currentSort, setCurrentSort, sort} = useSortPosts();
 
     const {
         searchValue,
@@ -31,11 +34,12 @@ const Posts: React.FC = () => {
     useEffect(() => {
         if (searchValue) {
             const filteredPosts = posts.filter(post => post.title.includes(searchValue));
-            dispatch(setFilteredPosts(filteredPosts));
+            dispatch(setFilteredPosts(sort(filteredPosts)));
         } else {
-            dispatch(setFilteredPosts(posts));
+            dispatch(setFilteredPosts(sort(posts)));
         }
-    }, [searchValue])
+    }, [searchValue, currentSort])
+
 
     // * Отображение спинера при подгрузке постов
     if (isLoading || isVisible) {
@@ -51,6 +55,10 @@ const Posts: React.FC = () => {
                 searchValue={searchValue}
                 cleanSearchValue={cleanSearchValue}
                 onChangeSearchValue={onChangeSearchValue}
+            />
+            <SortMenu
+                currentSort={currentSort}
+                setCurrentSort={setCurrentSort}
             />
             <PostsList />
         </Container>

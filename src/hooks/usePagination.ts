@@ -1,13 +1,18 @@
 import { useState, useEffect } from 'react';
 import { PostsI } from '../store/postsReducer';
+import useSearch from './useSearch';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store/reducer';
 
 export const POSTS_PER_PAGE = 10;
 
 const usePagination = (posts: PostsI[]) => {
+	const filteredPosts = useSelector((state: RootState) => state.posts.filteredPosts);
+
 	const [currentPage, setCurrentPage] = useState(1);
 	const [pageData, setPageData] = useState<PostsI[]>([]);
-	const totalItems = posts.length;
 
+	const totalItems = posts.length;
 	const totalPages = Math.ceil(totalItems / POSTS_PER_PAGE);
 
 	useEffect(() => {
@@ -19,7 +24,7 @@ const usePagination = (posts: PostsI[]) => {
 			const pageData = posts.slice(startIndex, endIndex);
 			setPageData(pageData);
 		}
-	}, [currentPage, POSTS_PER_PAGE]);
+	}, [currentPage, POSTS_PER_PAGE, filteredPosts]);
 
 
 	const goToPage = (page: number) => {
