@@ -1,0 +1,44 @@
+nav {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 153;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: white;
+    padding-right: 20px;
+}
+
+.burger_btn {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger_btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}
+
+.burger_btn span {
+    position: absolute;
+    top: 9px;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}
+
+.burger_btn:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}

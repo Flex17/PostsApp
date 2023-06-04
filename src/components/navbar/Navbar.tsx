@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ABOUT_ME_PAGE, POSTS_PAGE } from '../../App';
+import css from './navbar.module.scss';
+import Menu from './menu/Menu';
 
 const Navbar: React.FC = () => {
+	const [menuActive, setMenuActive] = useState(false);
+
+	useEffect(() => {
+		if (menuActive) {
+			document.body.style.overflowY = 'hidden';
+		} else {
+			document.body.style.overflowY = 'auto';
+		}
+	}, [menuActive]);
 
     return (
-		<div className="navbar d-flex p-3 justify-content-center">
-			<NavLink className="link-primary text-decoration-none me-4" to={POSTS_PAGE}>Посты</NavLink>
-			<NavLink className="link-primary text-decoration-none" to={ABOUT_ME_PAGE}>Обо мне</NavLink>
-		</div>
+		<>
+			<nav>
+				<div className={css.burger_btn} onClick={() => setMenuActive(!menuActive)}>
+					<span></span>
+				</div>
+			</nav>
+			<Menu active={menuActive} setActive={setMenuActive} />
+		</>
     );
 };
 

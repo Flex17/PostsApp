@@ -49,8 +49,8 @@ const Posts: React.FC = () => {
     }
 
     return (
-        <Container>
-            <div className="fs-1 fw-medium mb-4 text-center">Список постов</div>
+        <>
+            <div className="fs-1 fw-medium mb-4 mt-3 text-center">Список постов</div>
             <SearchBar
                 searchValue={searchValue}
                 cleanSearchValue={cleanSearchValue}
@@ -61,7 +61,7 @@ const Posts: React.FC = () => {
                 setCurrentSort={setCurrentSort}
             />
             <PostsList />
-        </Container>
+        </>
     );
 };
 

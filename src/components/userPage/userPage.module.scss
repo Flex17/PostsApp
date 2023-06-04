@@ -1,0 +1,24 @@
+.container {
+    @media (max-width: 992px) {
+	display: flex;
+	align-items: center !important;
+	flex-direction: column-reverse !important;
+
+	.posts{
+	    margin-right: 0 !important;
+	}
+
+	.info {
+	    display: flex;
+	    justify-content: center !important;
+	    align-items: center;
+	    margin-bottom: 20px;
+	    .wrapper{
+		max-width: 100%;
+		width: 100% !important;
+		text-align: center;
+		margin: 0 auto;
+	    }
+	}
+    }
+}
