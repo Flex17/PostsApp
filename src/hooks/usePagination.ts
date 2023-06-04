@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { PostsI } from '../store/postsReducer';
-import useSearch from './useSearch';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/reducer';
 

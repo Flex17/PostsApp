@@ -32,6 +32,7 @@ const PostsList: React.FC = () => {
 										title={title}
 										body={body}
 										userId={userId}
+										id={id}
 										key={id}
 									/>
 								)

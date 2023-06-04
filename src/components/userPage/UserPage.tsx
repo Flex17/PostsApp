@@ -49,9 +49,18 @@ const UserPage: React.FC = () => {
 				<Row>
 					<Col className="me-5">
 						{
-							posts.map(post =>(
-								<Post title={post.title} body={post.body} userId={post.userId} />
-							))
+							posts.map(post => {
+								const {id, userId, title, body} = post;
+								return (
+									<Post
+										title={title}
+										body={body}
+										userId={userId}
+										id={id}
+										key={id}
+									/>
+								)
+							})
 						}
 					</Col>
 					<Col>
