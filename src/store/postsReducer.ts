@@ -9,11 +9,13 @@ export interface PostsI {
 
 interface initialStateI {
 	posts: PostsI[],
+	filteredPosts: PostsI[],
 	isLoading: boolean,
 }
 
 const initialState: initialStateI = {
 	posts: [],
+	filteredPosts: [],
 	isLoading: false,
 }
 
@@ -26,10 +28,14 @@ export const postsSlice = createSlice({
 		},
 		getPostsSuccess: (state, action: PayloadAction<PostsI[]>) => {
 			state.posts = action.payload;
+			state.filteredPosts = action.payload;
 			state.isLoading = false;
 		},
 		getPostsFailure: (state) => {
 			state.isLoading = false;
+		},
+		setFilteredPosts: (state, action: PayloadAction<PostsI[]>) => {
+			state.filteredPosts = action.payload;
 		}
 	}
 });
@@ -38,6 +44,7 @@ export const {
 	getPostsSuccess,
 	getPostsFailure,
 	getPostsFetch,
+	setFilteredPosts,
 } = postsSlice.actions;
 
 export default postsSlice.reducer;

@@ -12,7 +12,7 @@ export const ABOUT_USER_PAGE = '/about_user';
 
 function App() {
 	return (
-		<div className="App w-75 m-auto">
+		<div className="App w-75 m-auto pb-5">
 			<Navbar/>
 			<Routes>
 				<Route path={POSTS_PAGE} element={<Posts/>}/>

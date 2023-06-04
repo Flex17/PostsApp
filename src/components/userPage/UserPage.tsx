@@ -6,11 +6,11 @@ import { RootState } from '../../store/reducer';
 import { POSTS_PAGE } from '../../App';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import Post from '../posts/post/Post';
+import Spinner from '../../ui/Spinner';
+import useDelay from '../../hooks/useDelay';
 
 const UserPage: React.FC = () => {
 	const {id} = useParams();
-
-	const [isVisible, setIsVisible] = useState(true);
 
 	const user = useSelector((state: RootState) => state.user.user);
 	const posts = useSelector((state: RootState) => state.user.posts);
@@ -19,6 +19,8 @@ const UserPage: React.FC = () => {
 
 	const dispatch = useDispatch();
 
+	const {isVisible} = useDelay();
+
 	useEffect(() => {
 		if (id) {
 			dispatch(getUserFetch(id));
@@ -26,25 +28,9 @@ const UserPage: React.FC = () => {
 		}
 	}, [dispatch, id]);
 
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setIsVisible(false);
-		}, 500);
-
-		return () => {
-			clearTimeout(timer);
-		};
-	}, []);
-
 	if (isPostsLoading || isUserLoading || isVisible) {
 		return (
-			<div style={{position: 'absolute', top: '50%', transform: 'translate(-50%, -50%)', left: '50%'}}>
-				<div className="d-flex justify-content-center align-items-center">
-					<div className="spinner-border" role="status" style={{width: '100px', height: '100px'}}>
-						<span className="visually-hidden">Загрузка...</span>
-					</div>
-				</div>
-			</div>
+			<Spinner />
 		);
 	};
 
