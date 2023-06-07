@@ -13,10 +13,17 @@ const Navbar: React.FC = () => {
 		}
 	}, [menuActive]);
 
+	const handleBurger = () => {
+		setMenuActive(!menuActive);
+	}
+
     return (
 		<>
 			<nav>
-				<div className={css.burger_btn} onClick={() => setMenuActive(!menuActive)}>
+				<div
+					className={`${css.burger_btn} ${menuActive ? css.opened : ''}`}
+					onClick={handleBurger}
+				>
 					<span></span>
 				</div>
 			</nav>

@@ -4,10 +4,10 @@ nav {
     position: fixed;
     z-index: 153;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
     background-color: white;
-    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .burger_btn {
@@ -17,13 +17,24 @@ nav {
     cursor: pointer;
 }
 
-.burger_btn:before {
-    content: "";
+.burger_btn:before,
+.burger_btn:after {
+    content: '';
     position: absolute;
-    top: 0;
     width: 20px;
     background-color: black;
     height: 2px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.burger_btn:before {
+    top: 0;
+    transform-origin: top left;
+}
+
+.burger_btn:after {
+    bottom: 0;
+    transform-origin: bottom left;
 }
 
 .burger_btn span {
@@ -32,13 +43,27 @@ nav {
     width: 20px;
     background-color: black;
     height: 2px;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
 }
 
-.burger_btn:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
+.burger_btn.opened:before {
+    transform: rotate(45deg);
     width: 20px;
-    background-color: black;
-    height: 2px;
 }
+
+.burger_btn.opened:after {
+    transform: rotate(-45deg);
+    width: 20px;
+
+}
+
+.burger_btn.opened span {
+    opacity: 0;
+}
+
+.burger_btn.opened {
+    height: 16px;
+}
+
+

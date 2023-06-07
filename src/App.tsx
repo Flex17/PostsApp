@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Posts from './components/posts/Posts';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import UserPage from './components/userPage/UserPage';
 import AboutMePage from './components/aboutMePage/AboutMePage';
-import Menu from './components/navbar/menu/Menu';
 import { Container } from 'react-bootstrap';
 
 export const POSTS_PAGE = '/';
