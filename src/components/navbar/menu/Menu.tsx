@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import css from './menu.module.scss';
 import { NavLink } from 'react-router-dom';
 import { ABOUT_ME_PAGE, POSTS_PAGE } from '../../../App';
@@ -28,6 +28,7 @@ const Menu: React.FC<MenuI> = ({active, setActive}: MenuI) => {
 						className="fs-5 link-light text-decoration-none w-100 text-center"
 						to={POSTS_PAGE}
 						onClick={onLinkClick}
+						data-testid="post-link"
 					>
 						Посты
 					</NavLink>
@@ -35,8 +36,10 @@ const Menu: React.FC<MenuI> = ({active, setActive}: MenuI) => {
 						className="fs-5 link-light text-decoration-none w-100 text-center mt-3"
 						to={ABOUT_ME_PAGE}
 						onClick={onLinkClick}
+						data-testid="about-me-link"
 					>
-						Обо мне</NavLink>
+						Обо мне
+					</NavLink>
 				</div>
 				<div className={css.menu_info}>
 					<NavLink

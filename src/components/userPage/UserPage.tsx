@@ -7,8 +7,8 @@ import { Container, Row } from 'react-bootstrap';
 import Spinner from '../../ui/Spinner';
 import useDelay from '../../hooks/useDelay';
 import css from './userPage.module.scss';
-import UserPosts from './UserPosts';
-import UserInfo from './UserInfo';
+import UserPosts from './userPosts/UserPosts';
+import UserInfo from './userInfo/UserInfo';
 import BreadCrum from './BreadCrum';
 
 const UserPage: React.FC = () => {

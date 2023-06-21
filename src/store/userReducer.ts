@@ -14,14 +14,14 @@ interface UserI {
 
 interface initialStateI {
 	user: UserI | null,
-	posts: PostsI[],
+	posts: PostsI[] | null,
 	isUserLoading: boolean,
 	isPostsLoading: boolean,
 }
 
 const initialState: initialStateI = {
 	user: null,
-	posts: [],
+	posts: null,
 	isUserLoading: false,
 	isPostsLoading: false,
 }

@@ -3,7 +3,7 @@ import React from "react";
 const AboutMePage: React.FC = () => {
 
     return (
-        <div>
+        <div data-testid="about-me-elem">
         	<div className="fs-4 mb-4 mt-3">
 				Здравствуйте, меня зовут Владислав!
 			</div>

@@ -23,27 +23,6 @@ const Pagination: React.FC<PaginationI> = ({
 	const isPreviousActive = currentPage === 1 ? 'disabled' : '';
 	const isNextActive = currentPage === totalPages ? 'disabled' : '';
 
-	// * Рендерит кнопочки с номерами страниц
-	// const renderPaginationItems = (totalPages: number) => {
-	// 	const paginationItems = [];
-	// 	for (let i = 1; i <= totalPages; i++) {
-	// 		const clickHandler = () => {
-	// 			goToPage(i);
-	// 		}
-	// 		const isActive = i === currentPage ? 'active' : '';
-	// 		paginationItems.push(
-	// 			<li
-	// 				className={`page-item ${isActive}`}
-	// 				onClick={clickHandler}
-	// 				role="button"
-	// 			>
-	// 				<div className="page-link">{i}</div>
-	// 			</li>
-	// 		);
-	// 	}
-	// 	return paginationItems;
-	// }
-
 	const renderPaginationItems = (totalPages: number) => {
 		const paginationItems = [];
 		let startPage = 1;

@@ -6,7 +6,7 @@ import Spinner from '../../ui/Spinner';
 import useDelay from '../../hooks/useDelay';
 import useSearch from '../../hooks/useSearch';
 import SearchBar from '../../ui/SearchBar';
-import PostsList from './PostsList';
+import PostsList from './postsList/PostsList';
 import useSortPosts from '../../hooks/useSortPosts';
 import SortMenu from '../../ui/SortMenu';
 

@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post Posts snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="border border-bottom-0 rounded-bottom-0 rounded-1 p-2 container"
+        >
+          <div
+            class="d-flex row"
+          >
+            <a
+              class="w-25"
+              href="/about_user/1"
+              style="max-width: 150px;"
+            >
+              <img
+                alt="Post image"
+                class="w-100 rounded-circle"
+                src="avatar.jpg"
+              />
+            </a>
+            <div
+              class="col"
+            >
+              <div
+                class="fs-3"
+              >
+                Test Title
+              </div>
+              <div
+                class="fs-5"
+              >
+                Test Body
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="accordion mb-4"
+            id="accordionExample1"
+          >
+            <div
+              class="accordion-item"
+            >
+              <h2
+                class="accordion-header"
+                id="headingTwo1"
+              >
+                <button
+                  aria-controls="collapseTwo1"
+                  aria-expanded="false"
+                  class="accordion-button collapsed"
+                  data-bs-target="#collapseTwo1"
+                  data-bs-toggle="collapse"
+                  data-testid="btn"
+                  type="button"
+                >
+                  Посмотреть комментарии
+                </button>
+              </h2>
+              <div
+                aria-labelledby="headingTwo1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample1"
+                id="collapseTwo1"
+              >
+                <div
+                  class="accordion-body"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="border border-bottom-0 rounded-bottom-0 rounded-1 p-2 container"
+      >
+        <div
+          class="d-flex row"
+        >
+          <a
+            class="w-25"
+            href="/about_user/1"
+            style="max-width: 150px;"
+          >
+            <img
+              alt="Post image"
+              class="w-100 rounded-circle"
+              src="avatar.jpg"
+            />
+          </a>
+          <div
+            class="col"
+          >
+            <div
+              class="fs-3"
+            >
+              Test Title
+            </div>
+            <div
+              class="fs-5"
+            >
+              Test Body
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="accordion mb-4"
+          id="accordionExample1"
+        >
+          <div
+            class="accordion-item"
+          >
+            <h2
+              class="accordion-header"
+              id="headingTwo1"
+            >
+              <button
+                aria-controls="collapseTwo1"
+                aria-expanded="false"
+                class="accordion-button collapsed"
+                data-bs-target="#collapseTwo1"
+                data-bs-toggle="collapse"
+                data-testid="btn"
+                type="button"
+              >
+                Посмотреть комментарии
+              </button>
+            </h2>
+            <div
+              aria-labelledby="headingTwo1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample1"
+              id="collapseTwo1"
+            >
+              <div
+                class="accordion-body"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

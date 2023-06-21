@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About me page component About me page snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        data-testid="about-me-elem"
+      >
+        <div
+          class="fs-4 mb-4 mt-3"
+        >
+          Здравствуйте, меня зовут Владислав!
+        </div>
+        <div
+          class="fs-5 mb-2"
+        >
+          Мне 18 лет, учусь на 1 курсе Тюменского государственного университета, специальность: Информационные системы и технологии.
+          <br />
+           Проживаю, соответственно, тоже в городе Тюмень.
+        </div>
+        <div
+          class="fs-5 mb-2"
+        >
+          Фронтендом начал заниматься примерно 3 года тому назад, путь был такой: верстка → js → react → ts 
+          <br />
+          Уже успел поработать 1 год в компании Smart Bit, меня взяли на проект wakadoo.ru, можно сказать, что я один писал весь фронт (авторизация, работа с api, разрешения, роли и тд), разве что на первых порах мне помогал наставник. 
+          <br />
+          Сейчас этот проект практически закончен, дорабатываются некоторые мелочи, но я к нему уже не причастен.
+        </div>
+        <div
+          class="fs-5 mb-4"
+        >
+          Отмечу, что было интересно делать ваше тестовое задание, был приятно удивлен тз и тем, насколько оно подробно написано.
+          <br />
+          В завершении скажу, что хотел бы работать в вашей компании, с нетерпением жду ответу и желательно комментариев по тестовому заданию, было бы интересно их услышать!
+        </div>
+        <div
+          class="fs-5 text-end"
+        >
+          Спасибо за уделенное время!
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      data-testid="about-me-elem"
+    >
+      <div
+        class="fs-4 mb-4 mt-3"
+      >
+        Здравствуйте, меня зовут Владислав!
+      </div>
+      <div
+        class="fs-5 mb-2"
+      >
+        Мне 18 лет, учусь на 1 курсе Тюменского государственного университета, специальность: Информационные системы и технологии.
+        <br />
+         Проживаю, соответственно, тоже в городе Тюмень.
+      </div>
+      <div
+        class="fs-5 mb-2"
+      >
+        Фронтендом начал заниматься примерно 3 года тому назад, путь был такой: верстка → js → react → ts 
+        <br />
+        Уже успел поработать 1 год в компании Smart Bit, меня взяли на проект wakadoo.ru, можно сказать, что я один писал весь фронт (авторизация, работа с api, разрешения, роли и тд), разве что на первых порах мне помогал наставник. 
+        <br />
+        Сейчас этот проект практически закончен, дорабатываются некоторые мелочи, но я к нему уже не причастен.
+      </div>
+      <div
+        class="fs-5 mb-4"
+      >
+        Отмечу, что было интересно делать ваше тестовое задание, был приятно удивлен тз и тем, насколько оно подробно написано.
+        <br />
+        В завершении скажу, что хотел бы работать в вашей компании, с нетерпением жду ответу и желательно комментариев по тестовому заданию, было бы интересно их услышать!
+      </div>
+      <div
+        class="fs-5 text-end"
+      >
+        Спасибо за уделенное время!
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

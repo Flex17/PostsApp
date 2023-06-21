@@ -1,29 +1,43 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import Comment, { CommentI } from './Comment';
-import useDelay from '../../../hooks/useDelay';
-import Spinner from '../../../ui/Spinner';
+import React, {useState} from 'react';
+import { CommentI } from './comment/Comment';
+import Comment from "./comment/Comment";
+import axios from "axios";
 
 interface CommentsI {
 	postId: number,
 }
 
+export const loadComments = async (postId: number) => {
+	try {
+		const url = `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
+		const response = await axios.get(url);
+		return response.data;
+	}
+	catch (error) {
+		return null;
+	}
+}
+
 const Comments: React.FC<CommentsI> = ({postId}: CommentsI) => {
 	const [comments, setComments] = useState<CommentI[]>();
+	const [isDataLoading, setIsDataLoading] = useState(false);
 
-	const loadComments = async () => {
-		if (!comments) {
-			await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
-				.then((response) => {
-					setComments(response.data);
+	const toLoad = async () => {
+		if (!isDataLoading) {
+			setIsDataLoading(true);
+
+			loadComments(postId)
+				.then(data => {
+					console.log(data)
+					setComments(data);
 				})
-				.catch((error) => {
-					throw Error(error);
+				.finally(() => {
+					setIsDataLoading(false);
 				})
 		}
 	}
 
-    return (
+	return (
 		<div>
 			<div className="accordion mb-4" id={`accordionExample${postId}`}>
 				<div className="accordion-item">
@@ -35,7 +49,8 @@ const Comments: React.FC<CommentsI> = ({postId}: CommentsI) => {
 							data-bs-target={`#collapseTwo${postId}`}
 							aria-expanded="false"
 							aria-controls={`collapseTwo${postId}`}
-							onClick={loadComments}
+							onClick={toLoad}
+							data-testid="btn"
 						>
 							Посмотреть комментарии
 						</button>
@@ -47,15 +62,17 @@ const Comments: React.FC<CommentsI> = ({postId}: CommentsI) => {
 					>
 						<div className="accordion-body">
 							{
-								comments?.map(comment => {
+								comments && comments.map(comment => {
 									const {id, email, body} = comment;
 									return (
-										<Comment
-											id={id}
-											email={email}
-											body={body}
-											key={id}
-										/>
+										<div data-testid="comment" key={id}>
+											<Comment
+												id={id}
+												email={email}
+												body={body}
+												key={id}
+											/>
+										</div>
 									)
 								})
 							}

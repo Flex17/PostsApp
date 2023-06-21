@@ -1,10 +1,10 @@
 import React from "react";
 import { Col } from 'react-bootstrap';
-import Post from './post/Post';
+import Post from '../post/Post';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store/reducer';
-import usePagination from '../../hooks/usePagination';
-import Pagination from '../../ui/Pagination';
+import { RootState } from '../../../store/reducer';
+import usePagination from '../../../hooks/usePagination';
+import Pagination from '../../../ui/Pagination';
 
 const PostsList: React.FC = () => {
 	const filteredPosts = useSelector((state: RootState) => state.posts.filteredPosts);

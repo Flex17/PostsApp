@@ -18,7 +18,7 @@ const Post: React.FC<PostsI> = ({
 			<Container className="border border-bottom-0 rounded-bottom-0 rounded-1 p-2">
 				<Row className="d-flex">
 					<NavLink to={`${ABOUT_USER_PAGE}/${userId}`} className="w-25" style={{maxWidth: '150px'}}>
-						<Image roundedCircle src={logo} className="w-100"/>
+						<Image roundedCircle src={logo} className="w-100" alt="Post image"/>
 					</NavLink>
 					<Col>
 						<div className="fs-3">{title}</div>
